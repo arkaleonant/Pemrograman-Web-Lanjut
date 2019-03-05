@@ -1,0 +1,32 @@
+<h1>INI Tugas Pertama Biodata</h1>
+<h1> {{currentDate|date:"fullDate"}} </h1>
+
+<h1>
+    <table>
+        <tbody>
+          <tr *ngFor="let a of datas">
+            <td>{{a.data}}</td>  
+          </tr>
+        </tbody>
+      </table>
+</h1>
+
+<div>
+    <h2>
+        <table border=1>
+            <thead>
+              <th>No.</th>
+              <th>Hobby</th>
+              <th>Keterangan</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let b of hobi">
+                <td>{{b.no}}</td> 
+                <td>{{b.hobby}}</td>
+                <td>{{b.keterangan}}</td>   
+              </tr>
+            </tbody>
+        </table>
+    </h2>    
+</div>
+

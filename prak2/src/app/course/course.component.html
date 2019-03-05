@@ -1,0 +1,32 @@
+<p>
+  course works!
+</p>
+<h1>ini komponen course</h1>
+{{title}}
+
+<table>
+  <thead>
+    <th>id</th>
+    <th>nama</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of courses">
+      <td>{{a.id}}</td> 
+      <td>{{a.nama}}</td>   
+    </tr>
+  </tbody>
+</table>
+
+<table>
+    <thead>
+      <th>id</th>
+      <th>mobil</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let b of Courses">
+        <td>{{b.id}}</td> 
+        <td>{{b.mobil}}</td>   
+      </tr>
+    </tbody>
+  </table>
+  {{currentDate|date:"fullDate"}}
