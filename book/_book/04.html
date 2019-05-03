@@ -1,0 +1,69 @@
+# Praktikum 5
+## 4 | Directive
+
+### Bagian 1 : ngIf
+contoh pertama
+- ketik perintah yang ada dibawah ini pada app.component.ts
+
+    ![](image/praktikum5/contoh_pertama_a.PNG)
+
+- dan tambahkan juga pada course.component.html
+
+    ![](image/praktikum5/contoh_pertama_b.PNG)
+
+- maka hasilnya seperti dibawah ini :
+
+    ![](image/praktikum5/hasil_pertama_a.PNG)
+
+    ![](image/praktikum5/hasil_pertama_b.PNG)
+
+contoh kedua
+- ketik code dibawah ini :
+    ![](image/praktikum5/contoh_kedua.PNG)
+
+### Bagian 2 : Kind Of Binding
+- ketik code pada course.component.html
+
+```
+
+<button type="button" class="btn btn-primary" [style.backgroundColor]="isActive?'blue':'red'"> style tambah</button>
+<br>
+<button type="button" class="btn btn-primary" (click)="onSave($event)"> save </button>
+<br>
+<div (click)="onDivClick($event)">
+  <button type="button" class="btn btn-primary" (click)="onSave($event)"> div </button>
+</div>
+<br>
+<input type="text" [value]="nama" (keyup.enter)="nama=$event.target.value;onKeyup()">
+
+```
+
+- dan ketik juga di course.component.ts
+```
+  onSave($event){
+    $event.stopPropagation();
+    console.log("save sudah di klik !", $event);
+  }
+  onDivClick($event){
+    console.log("div sudah di klik !", $event);
+  }
+
+  onKeyup(nama){
+    console.log(this.nama);
+  }
+```
+- maka hasilnya seperti ini :
+
+    ![](image/praktikum4/final.PNG)
+
+- jika di klik button save maka :
+
+    ![](image/praktikum4/save.PNG)
+
+- jika kita inputkan sesuatu pada field maka akan muncul seperti dibawah ini :
+
+    ![](image/praktikum4/input.PNG)
+
+
+
+
