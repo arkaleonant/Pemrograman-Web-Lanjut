@@ -1,0 +1,73 @@
+**Praktikum – Bagian 1: Preparing for Deployment**
+
+| **Langkah** | **Keterangan**                                                                                                                                                                                |
+|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1           | Buka folder auth-demo kemudian open terminal lakukan instal node modul **npm install** kemudian jalankan aplikasi dengan perintah **ng serve --open**                                         |
+| 2           | Jalankan perintah **node_modules/.bin/ngc** Apa yang terjadi ? jelaskan (soal 1)                                                                                                              |
+| 3           | [./media/image2.png](./media/image2.png) pertama, kita hapus semua file yang sudah di generate sebelumnya. Klik pada yang ditunjukkan arah panah disamping.                                   |
+| 4           | Klik pada panah seperti gambar disebelah kiri dan perhatikan hasilnya.                                                                                                                        |
+| 5           | Lakukan perubahan pada tittle dengan tittle2 pada [home.component.html](http://home.component.html), perhatikan bila kita run perintah **node_modules/.bin/ngc**  Apa yang terjadi ? (soal 2) |
+| 6           | Kemudian lakukan perintah **ng build –prod** untuk membuat sebuah produksi, lalu perhatikan apa yang terjadi? Jelaskan apa ada perubahan pada sizenya ? (soal 3)                              |
+
+![](media/39f14284ee6b18b19440184b483a585d.png)
+
+![](media/9ebc1a7f8539f4221102adfd467a82c4.png)
+
+![](media/3d30af02fe5caaca58ffa028fda141b7.png)
+
+![](media/31ee88120e71f2fafd5bdbff1c689ea3.png)
+
+![](media/bfdd4cf00f220283dd5971da9ac2bbc7.png)
+
+**Praktikum – Bagian 2: Environments**
+
+| **Langkah** | **Keterangan**                                                                                                                                                |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1           | Open file environments.ts kemudian tambahkan satu baris berikut :                                                                                             |
+| 2           | Open file environment.prod.ts lalu modifikasi seperti berikut :                                                                                               |
+| 3           | Open file navbar.component.ts lalu modifikasi seperti berikut :                                                                                               |
+| 4           | Open file navbar.component.html lalu modifikasi seperti berikut :                                                                                             |
+| 5           | Jalankan aplikasi lalu catat hasilnya (soal 4)                                                                                                                |
+| 6           | Buatlah file baru dengan menduplikasi file environment.prod.ts dan lakukan perubahan nama menjadi environment.test.ts. kemudian ubahlah color menjadi purple. |
+| 7           | Open file angular-cli.json, tambahkan environment yang baru menjadi seperti berikut :                                                                         |
+| 8           | Jalan kan dengan perintah berikut : ng build -environment=test kemudikan lakukan ng serve –environment=test                                                   |
+| 9           | Perhatikan dan catat apa yang terjadi (soal 5)                                                                                                                |
+| 10          | Lakukan perubahan warna purple dengan green, dan jalankan aplikasi. Catat dan jelaskan apa yang terjadi (soal 6)                                              |
+
+![../../../../../Desktop/Screen%20Shot%202019-05-05%20at%2019.36.25.png](media/f6aa6a5493021e7fa11b067cca880180.png)
+
+![../../../../../Desktop/Screen%20Shot%202019-05-05%20at%2019.36.34.png](media/1c50116170ec39baec33bb0afd621e44.png)
+
+![../../../../../Desktop/Screen%20Shot%202019-05-05%20at%2019.36.42.png](media/352953d81a64678cefc86210913424a1.png)
+
+![../../../../../Desktop/Screen%20Shot%202019-05-05%20at%2019.36.50.png](media/572b680c4962c0863bae210a07c2478d.png)
+
+![](media/1265d596264ca664064f8df0637ce678.png)
+
+![](media/62db9c41f0f679112026f428d8e01bab.png)
+
+![](media/434e6441b6b55854171e3adbabf41358.png)
+
+![../../../../../Desktop/Screen%20Shot%202019-05-05%20at%2020.16.54.png](media/67f990a1ff03e875dc95a02c490dfb02.png)
+
+![](media/67c626068b9af0906c467d844e9147db.png)
+
+**Praktikum - Bagian 3 : Deploying to Github Pages**
+
+| **Langkah** | **Keterangan**                                                                                                                                            |
+|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1           | Buatlah akun di github, kemudian lakukan login dan create new repository. Beri nama repository dengan followers-app atau terserah kalian.                 |
+| 2           | Lakukan perintah berikut :                                                                                                                                |
+| 3           | Kemudian ketikan perintah berikut : **sudo npm i –g angular-cli-ghpages** dan **ng build –prod –base-href=”https://username.github.io/nama_repository/”** |
+| 4           | Tambahkan pada file package.json di scripts dengan : "deploy:gh": "ng build --prod --base-href='https://username.github.io/repository/' && sudo ngh"      |
+| 5           | Jalankan perintah berikut : **npm run deploy:gh** catat apa yang terjadi? (soal 7)                                                                        |
+
+![../../../../../Desktop/Screen%20Shot%202019-05-05%20at%2020.48.51.png](media/af7b93e45bbedfc50b22d72f6689b85e.png)
+
+jangan lupa untuk menyesuaikan nama nya .
+
+![](media/cdb84da025a9dbbae7337ccded8222e3.png)
+
+![](media/4ef1e1757a19c8c85117739e99d66bfe.png)
+
+![](media/9f076763191534f32526eafcb1c4170b.png)
