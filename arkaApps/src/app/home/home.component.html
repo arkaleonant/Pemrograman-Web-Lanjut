@@ -1,0 +1,33 @@
+<div style="text-align:center">
+          <h1>
+            Welcome to Arka Apps!
+          </h1>
+          <img width="300" src="assets/img/arka.JPG">
+</div>
+<div align="center">
+<div class="container" >
+  <div class="col-md-5">
+      <form [formGroup]="form">
+        <div class="form-group">
+          <label for="username"> Username</label>
+          <input 
+              formControlName="username"
+              id="username"
+              type="text"
+              class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="password"> Password </label>
+          <input 
+              formControlName = "password"
+              id="password"
+              type="password"
+              class="form-control">
+        </div>
+        <button class="btn btn-info" routerLink="/friend" type="submit"> Sign In </button>
+      </form>
+  </div>
+</div>
+</div>
+
+

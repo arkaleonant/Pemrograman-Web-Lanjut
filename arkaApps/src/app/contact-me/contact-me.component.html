@@ -1,0 +1,29 @@
+<div class="regentry" >
+  <div class="col-md-5">
+    <form (ngSubmit)="onSave()">
+      <div class="form-group">
+        <label for="nama"> Nama </label>
+        <input (click) = "onNew()" class="form-control" type="text" [(ngModel)]="inputModel.username" name="username">
+      </div>
+      <div class="form-group">
+        <label for="email"> Email</label>
+        <input  class="form-control" type="text" [(ngModel)]="inputModel.email" name="email"> 
+      </div>
+      <div class="form-group">
+        <label for="comment"> Comment </label>
+        <textarea  class="form-control" id="comment" rows="5" [(ngModel)]="inputModel.message" name="message" placeholder="isi comment dengan bijak"></textarea>
+      </div>
+      <button type="submit" class="btn btn-info">
+        Comment
+      </button>
+    </form>
+    <div align="left">
+    <tr *ngFor="let komentar of inputData">
+      <h3> {{komentar.labelData}} </h3>
+       <p> {{komentar.labelName}} : {{komentar.username}} </p>
+       <p> {{komentar.labelEmail}} : {{komentar.email}} </p>
+       <p> {{komentar.labelMessage}} : {{komentar.message}} </p>
+  </tr>
+</div>
+  </div>
+</div>
